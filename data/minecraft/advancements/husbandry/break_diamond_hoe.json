@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:husbandry/plant_seed",
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_hoe"
+    },
+    "title": {
+      "translate": "Questionable Priorities"
+    },
+    "description": {
+      "translate": "Completely use up a diamond hoe instead of trying to succeed"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "broke_hoe": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:diamond_hoe"]
+        },
+        "durability": -1
+      }
+    }
+  },
+  "requirements": [
+    [
+      "broke_hoe"
+    ]
+  ]
+}

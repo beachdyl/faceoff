@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:adventure/shoot_arrow",
+  "display": {
+    "icon": {
+      "item": "minecraft:target"
+    },
+    "title": {
+      "translate": "Opponents Be Warned"
+    },
+    "description": {
+      "translate": "Shoot a bullseye from over 30 blocks away"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "bullseye": {
+      "trigger": "minecraft:target_hit",
+      "conditions": {
+        "signal_strength": 15,
+        "projectile": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "distance": {
+                "horizontal": {
+                  "min": 30.0
+                }
+              }
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bullseye"
+    ]
+  ]
+}

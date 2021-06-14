@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:barrier"
+    },
+    "title": {
+      "translate": "Bo Burnham"
+    },
+    "description": {
+      "translate": "Surrender from Faceoff"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "never_happens": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+		"from": "the_end",
+		"to": "the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "never_happens"
+    ]
+  ]
+}

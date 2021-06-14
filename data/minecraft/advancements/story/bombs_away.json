@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:story/lava_bucket",
+  "display": {
+    "icon": {
+      "item": "minecraft:tnt"
+    },
+    "title": {
+      "translate": "Terroristic Threats"
+    },
+    "description": {
+      "translate": "Use gunpowder and sand to craft TNT"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tnt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:tnt"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tnt"
+    ]
+  ]
+}

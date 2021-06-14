@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:adventure/ol_betsy",
+  "display": {
+    "icon": {
+      "item": "minecraft:crossbow"
+    },
+    "title": {
+      "translate": "Oh How The Tables Have Turned"
+    },
+    "description": {
+      "translate": "Kill a Pillager with the weapons of its fallen brethren"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_pillager": {
+      "trigger": "minecraft:killed_by_crossbow",
+      "conditions": {
+        "victims": [
+          {
+            "type": "minecraft:pillager"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill_pillager"
+    ]
+  ]
+}

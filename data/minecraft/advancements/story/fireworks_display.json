@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:firework_rocket"
+        },
+        "title": {"translate":"Illuminate the Sky"},
+        "description": {"translate":"Use gunpowder and paper to craft fireworks"},
+	    "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "minecraft:story/bombs_away",
+    "criteria": {
+        "firework_rocket": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:firework_rocket"]
+                    }
+                ]
+            }
+        }
+    }
+}

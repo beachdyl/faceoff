@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:story/lava_bucket",
+  "display": {
+    "icon": {
+      "item": "minecraft:obsidian"
+    },
+    "title": {
+      "translate": "I Like Hard Blocks and I Cannot Lie"
+    },
+    "description": {
+      "translate": "Gather some Obsidian, a block known for being hard 24/7"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "obsidian": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:obsidian"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obsidian"
+    ]
+  ]
+}

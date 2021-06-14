@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:carrot_on_a_stick"
+        },
+        "title": {"translate":"My Noble Steed"},
+        "description": {"translate":"Craft a carrot on a stick so you can Spanish off into the sunset on a pig"},
+		"show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "minecraft:husbandry/breed_an_animal",
+    "criteria": {
+        "tropical_fish": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:carrot_on_a_stick"]
+                    }
+                ]
+            }
+        }
+    }
+}

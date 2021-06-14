@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:adventure/shoot_arrow",
+  "display": {
+    "icon": {
+      "item": "minecraft:bow"
+    },
+    "title": {
+      "translate": "Point Blank"
+    },
+    "description": {
+      "translate": "Kill an opponent with a shot from point-blank range"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "point_blank": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:player",
+              "distance": {
+                "absolute": {
+                  "max": 2.0
+                }
+              }
+            },
+            "entity": "this"
+          }
+        ],
+        "killing_blow": {
+          "is_projectile": true
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "point_blank"
+    ]
+  ]
+}

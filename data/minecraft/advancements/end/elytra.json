@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:end/find_end_city",
+  "display": {
+    "icon": {
+      "item": "minecraft:elytra"
+    },
+    "title": {
+      "translate": "Red Bull Gives You Wiiings"
+    },
+    "description": {
+      "translate": "Obtain an elytra from a LootCrate"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "elytra": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:elytra"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "elytra"
+    ]
+  ]
+}

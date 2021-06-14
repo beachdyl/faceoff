@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:adventure/kill_player",
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": {
+      "translate": "Dragonball Resurrection"
+    },
+    "description": {
+      "translate": "Use the power of a Dragonball to regain life"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "never_happens": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+		"from": "minecraft:the_end",
+		"to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "never_happens"
+    ]
+  ]
+}

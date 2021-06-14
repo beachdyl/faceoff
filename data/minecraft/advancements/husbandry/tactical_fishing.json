@@ -1,0 +1,60 @@
+{
+  "parent": "minecraft:husbandry/fishy_business",
+  "display": {
+    "icon": {
+      "item": "minecraft:pufferfish_bucket"
+    },
+    "title": {
+      "translate": "Spec Ops Fish Wrangling"
+    },
+    "description": {
+      "translate": "advancements.husbandry.tactical_fishing.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cod_bucket": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:cod_bucket"]
+        }
+      }
+    },
+    "tropical_fish_bucket": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:tropical_fish_bucket"]
+        }
+      }
+    },
+    "pufferfish_bucket": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:pufferfish_bucket"]
+        }
+      }
+    },
+    "salmon_bucket": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:salmon_bucket"]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cod_bucket",
+      "tropical_fish_bucket",
+      "pufferfish_bucket",
+      "salmon_bucket"
+    ]
+  ]
+}

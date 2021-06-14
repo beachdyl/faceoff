@@ -1,0 +1,85 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:oak_boat"
+        },
+        "title": {"translate":"Boaty McBoatface"},
+        "description": {"translate":"Craft a boat for sailing on the high seas"},
+		"show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "minecraft:adventure/just_keep_swimming",	
+    "criteria": {
+        "oak_boat": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:oak_boat"]
+                    }
+                ]
+            }
+        },
+        "spruce_boat": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:spruce_boat"]
+                    }
+                ]
+            }
+        },
+		"birch_boat": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:birch_boat"]
+                    }
+                ]
+            }
+        },
+        "jungle_boat": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:jungle_boat"]
+                    }
+                ]
+            }
+        },
+        "acacia_boat": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:acacia_boat"]
+                    }
+                ]
+            }
+        },
+        "dark_oak_boat": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:dark_oak_boat"]
+                    }
+                ]
+            }
+        }
+	},
+	"requirements": [
+		[
+			"oak_boat",
+			"spruce_boat",
+			"birch_boat",
+			"jungle_boat",
+			"acacia_boat",
+			"dark_oak_boat"
+		]
+	]		
+}

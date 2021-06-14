@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:story/obtain_armor",
+  "display": {
+    "icon": {
+      "item": "minecraft:shield"
+    },
+    "title": {
+      "translate": "Adept Defender"
+    },
+    "description": {
+      "translate": "Use a shield to deflect a projectile"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "deflected_projectile": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "is_projectile": true
+          },
+          "blocked": true
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "deflected_projectile"
+    ]
+  ]
+}

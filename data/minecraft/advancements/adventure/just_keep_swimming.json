@@ -1,0 +1,24 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:water_bucket"
+        },
+        "title": {"translate":"Become Moist"},
+        "description": {"translate":"Take a dip in the water"},
+		"show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "minecraft:adventure/root",
+	"rewards": {
+		"function": "bc_rewards:building/just_keep_swimming"
+    },
+    "criteria": {
+        "enter_water": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:water"
+            }
+        }
+    }
+}
