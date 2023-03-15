@@ -10,34 +10,13 @@ function faceoff:damagealert
 #
 # END
 #
-function faceoff:end
+function faceoff:endofgame
 #
 #
 # GLOBAL
 #
 #
-scoreboard players operation @a enddo = enddo global
-scoreboard players operation @a ended = ended global
-scoreboard players operation @a endewaittimer = endewaittimer global
-scoreboard players operation @a fireworksallowed = fireworksallowed global
-scoreboard players operation @a gamego = gamego global
-scoreboard players operation @a gamestarted = gamestarted global
-scoreboard players operation @a healthawaittimer = healthawaittimer global
-scoreboard players operation @a lobbyblindness = lobbyblindness global
-scoreboard players operation @a lobbytimer = lobbytimer global
-scoreboard players operation @a oredrops = oredrops global
-scoreboard players operation @a playersleft = playersleft global
-scoreboard players operation @a starttimer = starttimer global
-scoreboard players operation @a tournament = tournament global
-scoreboard players operation @a twist = twist global
-scoreboard players operation @a twistchoose = twistchoose global
-scoreboard players operation @a virusassigned = virusassigned global
-scoreboard players operation @a virusenabled = virusenabled global
-scoreboard players operation @a waittimer = waittimer global
-scoreboard players operation @a wbsize = wbsize global
-scoreboard players operation @a wbshrink = wbshrink global
-scoreboard players operation @a wbstage = wbstage global
-scoreboard players operation @a wspawned = wspawned global
+function faceoff:globalvar
 #
 #
 # HAUNT
