@@ -1,8 +1,8 @@
 {
     "replace":true,
     "values":[
-        "minecraft:zombie",
-        "minecraft:skeleton",
+        "minecraft:allay",
+        "minecraft:axolotl",
         "minecraft:bat",
         "minecraft:cat",
         "minecraft:chicken",
@@ -10,6 +10,8 @@
         "minecraft:cow",
         "minecraft:donkey",
         "minecraft:fox",
+        "minecraft:frog",
+        "minecraft:glow_squid",
         "minecraft:horse",
         "minecraft:mooshroom",
         "minecraft:mule",
@@ -22,8 +24,9 @@
         "minecraft:skeleton_horse",
         "minecraft:snow_golem",
         "minecraft:squid",
+        "minecraft:strider",
+        "minecraft:tadpole",
         "minecraft:tropical_fish",
-        "minecraft:turtle",
-        "minecraft:pufferfish"
+        "minecraft:turtle"
     ]
 }
