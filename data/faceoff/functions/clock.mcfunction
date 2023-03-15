@@ -41,7 +41,8 @@ scoreboard players enable @r help
 scoreboard players enable @r menu
 execute if entity @r[scores={gamestarted=1}] run scoreboard players enable @r suicide
 scoreboard players enable @a damenu
-
+scoreboard players enable @a[team=s] haunt
+scoreboard players enable @a[team=h] haunt
 
 # game advantage
 execute if entity @r[scores={adv=1}] run scoreboard players set @a advantage 0
