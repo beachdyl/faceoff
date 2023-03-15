@@ -175,8 +175,8 @@ scoreboard players set @a mobkills 0
 scoreboard players set @a kills 0
 scoreboard players set @a deathtime 0
 scoreboard players set @a gameclock 0
-scoreboard players remove Total exist
-scoreboard players remove Bar waittime
+scoreboard players reset Total exist
+scoreboard players reset Bar waittime
 scoreboard players set wbshrink global 0
 scoreboard players set @a waittime 0
 scoreboard players set @a endewaittime 0
