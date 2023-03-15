@@ -13,9 +13,6 @@ team join a @r[scores={health=6..},team=d]
 team join s @r[scores={health=0,mobkills=1..},team=!s,gamemode=survival]
 team join h @r[scores={health=0,mobkills=..0},team=!h,gamemode=survival]
 
-# misc
-clear @a[scores={fireworksallowed=0}] firework_star
-
 # newly dead players get a haunt prompt
 tellraw @a[scores={health=0,hauntprompt=0},gamemode=survival] [{"text":"Tip: You can run \"/trigger menu\" or ","italic":true,"color":"gray"},{"text":"[click here]","color":"gray","italic":true,"clickEvent":{"action":"suggest_command","value":"/trigger menu"}},{"text":" to access the haunt menu as a dead player.","italic":true,"color":"gray"}]
 scoreboard players set @a[scores={health=0,hauntprompt=0,damagealert=1..},gamemode=survival] damagealert 3
@@ -104,3 +101,6 @@ give @a[scores={oredrops=2..,gamestarted=1..,odemerald=1..},gamemode=survival] e
 scoreboard players remove @a[scores={oredrops=2..,gamestarted=1..,odemerald=1..},gamemode=survival] odemerald 1
 give @a[scores={oredrops=2..,gamestarted=1..,odcoal=1..},gamemode=survival] raw_copper 3
 scoreboard players remove @a[scores={oredrops=2..,gamestarted=1..,odcoal=1..},gamemode=survival] odcopper 1
+
+# misc
+clear @a[scores={fireworksallowed=0}] firework_star
