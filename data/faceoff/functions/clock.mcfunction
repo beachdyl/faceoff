@@ -49,7 +49,7 @@ execute if entity @r[scores={adv=1}] run scoreboard players set @a advantage 0
 execute if entity @r[scores={adv=1}] run scoreboard players set @r[scores={adv=1}] advantage 1
 scoreboard players set @r[scores={advantage=1,health=0}] advantage 0
 execute if entity @r[scores={adv=1,tournament=1}] run tellraw @a {"text":"Warning: The game is in tournament mode and a player has been assigned a game advantage. This can be considered unfair.","color":"gold"}
-execute if entity @r[scores={adv=1}] run scoreboard players set @r[scores={adv=1}] adv 0
+execute if entity @r[scores={adv=1}] run scoreboard players set @a[scores={adv=1}] adv 0
 effect give @a[scores={advantage=1,gamego=1}] speed 15 0 true
 effect give @a[scores={advantage=1,gamego=1}] invisibility 15 0 false
 effect give @a[scores={advantage=1,gamego=1}] jump_boost 15 0 true
