@@ -41,7 +41,7 @@ execute if entity @r[scores={adv=1}] run scoreboard players set @r[scores={adv=1
 effect give @a[scores={advantage=1,gamego=1}] speed 15 0 true
 effect give @a[scores={advantage=1,gamego=1}] invisibility 15 0 false
 effect give @a[scores={advantage=1,gamego=1}] jump_boost 15 0 true
-replaceitem entity @a[scores={advantage=1,gamego=1}] armor.head stone_button{display:{Name:"{\"text\":\"Game Advantage\"}"},HideFlags:63,Enchantments:[{id:"minecraft:binding_curse",lvl:1}],AttributeModifiers:[{AttributeName:"generic.maxHealth",Name:"Health Limited to 50%",Slot:"head",Amount:-10,Operation:0,UUIDMost:64901,UUIDLeast:107005}]}
+item replace entity @a[scores={advantage=1,gamego=1}] armor.head with stone_button{display: {Name: '{"text":"Game Advantage"}'}, HideFlags: 63, Enchantments: [{id: "minecraft:binding_curse", lvl: 1}], AttributeModifiers: [{AttributeName: "generic.max_health", Name: "Health Limited to 50%", Slot: "head", Amount: -10, Operation: 0, UUID: [I; 0, 64901, 0, 107005]}]}
 execute at @r[gamemode=survival,scores={advantage=0,gamego=1}] as @r[gamemode=survival,scores={advantage=0,gamego=1}] run effect clear @a[gamemode=survival,scores={advantage=1},distance=..12] speed
 execute at @r[gamemode=survival,scores={advantage=0,gamego=1}] as @r[gamemode=survival,scores={advantage=0,gamego=1}] run effect clear @a[gamemode=survival,scores={advantage=1},distance=..16] invisibility
 execute at @r[gamemode=survival,scores={advantage=0,gamego=1}] as @r[gamemode=survival,scores={advantage=0,gamego=1}] run effect clear @a[gamemode=survival,scores={advantage=1},distance=..12] jump_boost
@@ -538,10 +538,10 @@ execute if entity @r[scores={damagecalc1=1..,damagetimer=5,health=1..2},gamemode
 execute if entity @r[scores={damagecalc2=1..,damagetimer=25,health=1..2},gamemode=survival] run scoreboard players set healthawaittimer global 1
 execute if entity @r[scores={damagecalc3=1..,damagetimer=45,health=1..2},gamemode=survival] run scoreboard players set healthawaittimer global 1
 execute if entity @r[scores={damagecalc4=1..,damagetimer=65,health=1..2},gamemode=survival] run scoreboard players set healthawaittimer global 1
-execute if entity @r[scores={damagecalc1=1..,damagetimer=5,health=1..,damagealertt=50..},gamemode=survival] run scoreboard players set damagealertt 0
-execute if entity @r[scores={damagecalc1=1..,damagetimer=25,health=1..,damagealertt=50..},gamemode=survival] run scoreboard players set damagealertt 0
-execute if entity @r[scores={damagecalc1=1..,damagetimer=45,health=1..,damagealertt=50..},gamemode=survival] run scoreboard players set damagealertt 0
-execute if entity @r[scores={damagecalc1=1..,damagetimer=65,health=1..,damagealertt=50..},gamemode=survival] run scoreboard players set damagealertt 0
+execute if entity @r[scores={damagecalc1=1..,damagetimer=5,health=1..,damagealertt=50..},gamemode=survival] run scoreboard players set damagealertt global 0
+execute if entity @r[scores={damagecalc1=1..,damagetimer=25,health=1..,damagealertt=50..},gamemode=survival] run scoreboard players set damagealertt global 0
+execute if entity @r[scores={damagecalc1=1..,damagetimer=45,health=1..,damagealertt=50..},gamemode=survival] run scoreboard players set damagealertt global 0
+execute if entity @r[scores={damagecalc1=1..,damagetimer=65,health=1..,damagealertt=50..},gamemode=survival] run scoreboard players set damagealertt global 0
 scoreboard players set @r[scores={damenu=1}] damenu -1
 scoreboard players set @r[scores={damenu=6..}] damenu -1
 tellraw @r[scores={damenu=..-1}] {"text":"Available DamageAlert Levels:","color":"light_purple"}
@@ -661,7 +661,7 @@ execute if entity @r[scores={haunttime=2332..,haunt=8,mobkills=1..,playersleft=3
 execute if entity @r[scores={haunttime=2332..,haunt=8,mobkills=1..,playersleft=3..}] run scoreboard players remove @r[scores={haunttime=2332..,haunt=8,mobkills=1..,playersleft=3..}] haunttime 2332
 tellraw @r[scores={haunttime=0..3497,haunt=2,mobkills=1..,playersleft=3..}] {"text":"You do not have enough Haunt Points for this haunt yet. Wait for your points to increase!","color":"red"}
 execute if entity @r[scores={haunttime=3498..,haunt=2,mobkills=1..,playersleft=3..}] run tellraw @a [{"text":"The world has been haunted by ","color":"light_purple"},{"selector":"@r[scores={haunttime=3498..,haunt=2,mobkills=1..,playersleft=3..}]"}]
-execute if entity @r[scores={haunttime=3498..,haunt=2,mobkills=1..,playersleft=3..}] run time set 18000
+execute if entity @r[scores={haunttime=3498..,haunt=2,mobkills=1..,playersleft=3..}] run time set 18000t
 execute if entity @r[scores={haunttime=3498..,haunt=2,mobkills=1..,playersleft=3..}] run scoreboard players remove @r[scores={haunttime=3498..,haunt=2,mobkills=1..,playersleft=3..}] haunttime 3498
 tellraw @r[scores={haunttime=0..3497,haunt=3,mobkills=1..,playersleft=3..}] {"text":"You do not have enough Haunt Points for this haunt yet. Wait for your points to increase!","color":"red"}
 execute if entity @r[scores={haunttime=3498..,haunt=3,mobkills=1..,playersleft=3..}] run tellraw @a [{"selector":"@r[scores={hauntee=1}]"},{"text":" has been haunted by ","color":"light_purple"},{"selector":"@r[scores={haunttime=3498..,haunt=3,mobkills=1..,playersleft=3..}]"}]
@@ -695,7 +695,7 @@ execute if entity @r[scores={boomtimer=0,boomtime=1..}] run scoreboard players s
 scoreboard players set @a haunt 0
 execute if entity @r[scores={gamestarted=1..}] unless entity @r[scores={ended=1..}] run scoreboard players add @a hauntwarntimen 1
 execute if entity @r[scores={hauntwarntimen=3000..3025,gamestarted=1..}] unless entity @r[scores={ended=1..}] run title @a[gamemode=survival,scores={ended=0,mobkills=..0}] actionbar {"text":"You must kill a mob to be able to haunt when you die!","color":"yellow"}
-execute if entity @r[scores={hauntwarntimen=6000..6000,gamestarted=1..}] unless entity @r[scores={ended=1..}] run tellraw @a[gamemode=survival,scores={ended=0,mobkills=..0,playersleft=3..}] {"text":"You must kill a mob during your time alive, or you will not be able to haunt when you die! This message will continue to appear periodically until you kill any mob.","color":"yellow"}
+execute if entity @r[scores={hauntwarntimen=6000,gamestarted=1..}] unless entity @r[scores={ended=1..}] run tellraw @a[gamemode=survival,scores={ended=0,mobkills=..0,playersleft=3..}] {"text":"You must kill a mob during your time alive, or you will not be able to haunt when you die! This message will continue to appear periodically until you kill any mob.","color":"yellow"}
 execute if entity @r[scores={hauntwarntimen=6000..6025,gamestarted=1..}] unless entity @r[scores={ended=1..}] run title @a[gamemode=survival,scores={ended=0,mobkills=..0}] actionbar {"text":"You must kill a mob to be able to haunt when you die!","color":"yellow"}
 execute if entity @r[scores={hauntwarntimen=6025..,gamestarted=1..}] unless entity @r[scores={ended=1..}] run scoreboard players set @a hauntwarntimen 0
 #
@@ -883,7 +883,7 @@ execute if entity @r[scores={wbshrink=1}] run title @a title {"text":"Stage 1","
 execute if entity @r[scores={wbshrink=1,tournament=0}] run title @a subtitle {"text":"Slow Worldborder","color":"green"}
 execute if entity @r[scores={wbshrink=1,tournament=1}] run title @a subtitle {"text":"Fast Worldborder","color":"green"}
 execute if entity @r[scores={wbshrink=1}] run tellraw @a [{"text":"Tip: You can run \"/trigger menu\" or ","italic":true,"color":"gray"},{"text":"[click here]","color":"gray","italic":true,"clickEvent":{"action":"run_command","value":"/trigger menu"}},{"text":" to toggle the visibility of the boss bars at any time during the game.","italic":true,"color":"gray"}]
-execute if entity @r[scores={wbshrink=1}] at @a[gamemode=survival] as @a[gamemode=survival] run setblock ~ ~45 ~ chest{LootTable:"faceoff:sky_crate"} replace
+execute if entity @r[scores={wbshrink=1}] at @a[gamemode=survival] as @a[gamemode=survival] run setblock ~ ~45 ~ chest{LootTable: "faceoff:sky_crate"} replace
 execute if entity @r[scores={wbshrink=1}] run scoreboard players set wbstage global 1
 execute if entity @r[scores={wbshrink=1}] run scoreboard players set wbshrink global 2
 execute if entity @r[scores={ended=0,wbsize=400,wbstage=1,tournament=0}] run worldborder set 400.5
@@ -1043,7 +1043,7 @@ execute if entity @r[scores={starttimer=1..}] run gamerule drowningDamage true
 execute if entity @r[scores={starttimer=1..,tournament=0}] run scoreboard players set @a damagealert 2
 execute if entity @r[scores={starttimer=1..,tournament=1}] run scoreboard players set @a damagealert 1
 execute if entity @r[scores={starttimer=1..}] run effect clear @a
-execute if entity @r[scores={starttimer=1..}] run time set 50
+execute if entity @r[scores={starttimer=1..}] run time set 50t
 execute if entity @r[scores={starttimer=1..}] run gamerule doMobSpawning true
 execute if entity @r[scores={starttimer=1..}] run gamerule doMobLoot true
 execute if entity @r[scores={starttimer=1..}] run gamerule doTileDrops true
