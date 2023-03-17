@@ -1,10 +1,17 @@
 gamerule commandBlockOutput false
+
+# center world
 worldborder center ~ ~
 setworldspawn ~ ~ ~
 worldborder set 19
 worldborder warning time 10
 worldborder warning distance 0
+
+# reset for subsequent initializaitons
 kill @e[type=armor_stand]
+summon armor_stand ~ -63 ~ {Invisible:1,NoGravity:1}
+
+# add all objectives
 scoreboard objectives add adminmenu dropped:command_block "Admin Menu"
 scoreboard objectives add adv dummy "Assign Advantage"
 scoreboard objectives add advantage dummy "Advantage"
@@ -96,7 +103,11 @@ scoreboard objectives add wbshrink dummy "Worldborder Shrink"
 scoreboard objectives add wbsize dummy "Worldborder Size"
 scoreboard objectives add wbstage dummy "Border Stage"
 scoreboard objectives add wspawned dummy "Wither Spawned"
+
+# tab menu
 scoreboard objectives setdisplay list health
+
+# configure scoreboard teams
 team add a "Players"
 team add d "Dying Players"
 team add s "Ghosts"
@@ -129,6 +140,9 @@ team modify h deathMessageVisibility never
 team modify h prefix ""
 team modify h suffix " (Spectator)"
 team modify h color dark_purple
+team leave @a
+
+# set gamerules
 gamerule spectatorsGenerateChunks false
 gamerule spawnRadius 3
 gamerule randomTickSpeed 6
@@ -139,8 +153,13 @@ gamerule doTileDrops false
 gamerule doDaylightCycle false
 gamerule doInsomnia false
 gamerule drowningDamage false
+
+# lock lobby time
 time set 18000
-summon armor_stand ~ 1 ~ {Invisible:1,NoGravity:1}
+
+# center armor stand
+
+# set up bossbars
 bossbar add 1 "World Border"
 bossbar set 1 color green
 bossbar set 1 max 750
@@ -163,7 +182,11 @@ bossbar set 6 max 200
 bossbar set 6 name "Impending Hunger"
 bossbar set 6 color blue
 bossbar set 6 players
+
+# prioritize datapack
 datapack enable "file/faceoff" first
+
+#initialize variables
 scoreboard players set lobbytimer global 1
 scoreboard players set lobbyblindness global 0
 scoreboard players set gamego global 0
@@ -185,6 +208,8 @@ scoreboard players set enddo global 1
 scoreboard players set twist global 0
 scoreboard players set @e[type=armor_stand] level 0
 scoreboard players set @e[type=armor_stand] total 0
+
+# math variables
 scoreboard players set Twenty mathobj 20
 scoreboard players set Sixty mathobj 60
 scoreboard players set OneThousandOneHundredSixtySix mathobj 1166
@@ -199,5 +224,6 @@ scoreboard players set Eleven mathobj 11
 scoreboard players set Twelve mathobj 12
 scoreboard players set Thirteen mathobj 13
 scoreboard players set One mathobj 1
+
+# announce ready
 tellraw @p [{"text":"When you're ready, you can ","color":"green"},{"text":"[click here]","color":"light_green","italic":false,"clickEvent":{"action":"run_command","value":"/whitelist off"}},{"text":" to disable the whitelist, if necessary.","color":"green"}]
-team leave @a
