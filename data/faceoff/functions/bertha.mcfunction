@@ -51,9 +51,7 @@ function faceoff:shrink
 function faceoff:start
 function faceoff:startcount
 #
-#
 # TWISTS
-#
 #
 function faceoff:twists
 #
