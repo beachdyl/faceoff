@@ -153,3 +153,13 @@ execute if score starttimer global matches 1.. if score tournament global matche
 # advancement and help reminder
 execute if score starttimer global matches 1.. run advancement grant @a only minecraft:adventure/root
 execute if score starttimer global matches 1.. run tellraw @a [{"text":"Tip: You can run \"/trigger menu\" or ","italic":true,"color":"gray"},{"text":"[click here]","color":"gray","italic":true,"clickEvent":{"action":"run_command","value":"/trigger menu"}},{"text":" to show the Player Menu at any time during the game.","italic":true,"color":"gray"}]
+
+# do twists
+function faceoff:twists
+
+# finish start sequence
+execute if score starttimer global matches 1.. run scoreboard players set @a kills 0
+execute if score starttimer global matches 1.. run scoreboard players set @a mobkills 0
+execute if score starttimer global matches 1.. run scoreboard players set wspawned global 0
+execute if score starttimer global matches 1.. run scoreboard players set wbstage global 0
+execute if score starttimer global matches 1.. run scoreboard players set starttimer global 0

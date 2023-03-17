@@ -56,16 +56,6 @@ function faceoff:startcount
 function faceoff:twists
 #
 #
-# START (continued)
-#
-#
-execute if score starttimer global matches 1.. run scoreboard players set @a kills 0
-execute if score starttimer global matches 1.. run scoreboard players set @a mobkills 0
-execute if score starttimer global matches 1.. run scoreboard players set wspawned global 0
-execute if score starttimer global matches 1.. run scoreboard players set wbstage global 0
-execute if score starttimer global matches 1.. run scoreboard players set starttimer global 0
-#
-#
 # VIRUS
 #
 #
