@@ -1,7 +1,10 @@
+# maintain virus scores
 scoreboard players set @a[scores={infected=0}] virustime 0
 scoreboard players set @a[gamemode=spectator] infected -1
 execute if entity @r[scores={virusenabled=1,virusassigned=0,gamestarted=1}] run scoreboard players set @r[gamemode=survival,scores={infected=0}] infected 1
 execute if entity @r[scores={virusenabled=1,virusassigned=0,gamestarted=1}] run scoreboard players set virusassigned global 1
+
+# mild strain
 execute if score virusenabled global matches 1 run tellraw @a[scores={infected=1,virustime=1700}] [{"text":"[Virus]","color":"aqua"},{"text":" You don't feel well. You might have caught something.","color":"white"}]
 execute if score virusenabled global matches 1 run effect give @a[scores={infected=1,virustime=3000}] weakness 120 0 false
 execute if score virusenabled global matches 1 run effect give @a[scores={infected=1,virustime=3000}] slowness 180 0 false
@@ -19,6 +22,8 @@ execute if score virusenabled global matches 1 run effect give @a[scores={infect
 execute if score virusenabled global matches 1 run effect give @a[scores={infected=1,virustime=11500}] nausea 7 0 true
 execute if score virusenabled global matches 1 run tellraw @a[scores={infected=1,virustime=12000}] [{"text":"[Virus]","color":"aqua"},{"text":" Your symptoms are gone, but the virus is not.","color":"white"}]
 execute if score virusenabled global matches 1 run tellraw @a[scores={infected=1,virustime=14400}] [{"text":"[Virus]","color":"aqua"},{"text":" You are now immune to the Faceoff Virus.","color":"white"}]
+
+# severe strain
 execute if score virusenabled global matches 1 run tellraw @a[scores={infected=2,virustime=1500}] [{"text":"[Virus]","color":"aqua"},{"text":" You don't feel well. You might have caught something.","color":"white"}]
 execute if score virusenabled global matches 1 run effect give @a[scores={infected=2,virustime=2400}] weakness 60 0 false
 execute if score virusenabled global matches 1 run effect give @a[scores={infected=2,virustime=2400}] slowness 90 1 false
@@ -52,8 +57,10 @@ execute if score virusenabled global matches 1 run effect give @a[scores={infect
 execute if score virusenabled global matches 1 run effect give @a[scores={infected=2,virustime=8600}] poison 3 2 true
 execute if score virusenabled global matches 1 run tellraw @a[scores={infected=2,virustime=9600}] [{"text":"[Virus]","color":"aqua"},{"text":" Your symptoms are gone, but the virus is not.","color":"white"}]
 execute if score virusenabled global matches 1 run tellraw @a[scores={infected=2,virustime=11000}] [{"text":"[Virus]","color":"aqua"},{"text":" You are now immune to the Faceoff Virus.","color":"white"}]
+
+# virus transmission
 execute if score virusenabled global matches 1 as @a[scores={infected=1,virustime=1000..13300}] at @a[scores={infected=1,virustime=1000..13300}] run scoreboard players set @r[distance=..1,scores={infected=0},gamemode=survival] infected 2
 execute if score virusenabled global matches 1 as @a[scores={infected=1,virustime=1000..13300}] at @a[scores={infected=1,virustime=1000..13300}] run scoreboard players set @r[distance=1..6,scores={infected=0},gamemode=survival] infected 1
-execute if score virusenabled global matches 1 as @a[scores={infected=2,virustime=1300..10200}] at @a[scores={infected=1,virustime=1300..10200}] run scoreboard players set @r[distance=..4,scores={infected=0},gamemode=survival] infected 2
-execute if score virusenabled global matches 1 as @a[scores={infected=2,virustime=1300..10200}] at @a[scores={infected=1,virustime=1300..10200}] run scoreboard players set @r[distance=4..7,scores={infected=0},gamemode=survival] infected 1
-execute if score virusenabled global matches 1 as @a[scores={infected=2,virustime=1300..10200}] at @a[scores={infected=1,virustime=1300..10200}] run scoreboard players set @r[distance=..2,scores={infected=1,virustime=10..900},gamemode=survival] infected 2
+execute if score virusenabled global matches 1 as @a[scores={infected=2,virustime=1300..10200}] at @a[scores={infected=2,virustime=1300..10200}] run scoreboard players set @r[distance=..4,scores={infected=0},gamemode=survival] infected 2
+execute if score virusenabled global matches 1 as @a[scores={infected=2,virustime=1300..10200}] at @a[scores={infected=2,virustime=1300..10200}] run scoreboard players set @r[distance=4..7,scores={infected=0},gamemode=survival] infected 1
+execute if score virusenabled global matches 1 as @a[scores={infected=2,virustime=1300..10200}] at @a[scores={infected=2,virustime=1300..10200}] run scoreboard players set @r[distance=..2,scores={infected=1,virustime=10..900},gamemode=survival] infected 2
