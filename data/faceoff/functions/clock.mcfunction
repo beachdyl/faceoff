@@ -53,10 +53,13 @@ execute if entity @r[scores={adv=1}] run scoreboard players set @a[scores={adv=1
 effect give @a[scores={advantage=1,gamego=1}] speed 15 0 true
 effect give @a[scores={advantage=1,gamego=1}] invisibility 15 0 false
 effect give @a[scores={advantage=1,gamego=1}] jump_boost 15 0 true
+effect give @a[scores={advantage=1,gamego=1}] weakness 15 1 true
 item replace entity @a[scores={advantage=1,gamego=1}] armor.head with stone_button{display: {Name: '{"text":"Game Advantage"}'}, HideFlags: 63, Enchantments: [{id: "minecraft:binding_curse", lvl: 1}], AttributeModifiers: [{AttributeName: "generic.max_health", Name: "Health Limited to 50%", Slot: "head", Amount: -10, Operation: 0, UUID: [I; 0, 64901, 0, 107005]}]}
 execute at @r[gamemode=survival,scores={advantage=0,gamego=1}] as @r[gamemode=survival,scores={advantage=0,gamego=1}] run effect clear @a[gamemode=survival,scores={advantage=1},distance=..12] speed
 execute at @r[gamemode=survival,scores={advantage=0,gamego=1}] as @r[gamemode=survival,scores={advantage=0,gamego=1}] run effect clear @a[gamemode=survival,scores={advantage=1},distance=..16] invisibility
 execute at @r[gamemode=survival,scores={advantage=0,gamego=1}] as @r[gamemode=survival,scores={advantage=0,gamego=1}] run effect clear @a[gamemode=survival,scores={advantage=1},distance=..12] jump_boost
+execute at @r[gamemode=survival,scores={advantage=0,gamego=1}] as @r[gamemode=survival,scores={advantage=0,gamego=1}] run effect clear @a[gamemode=survival,scores={advantage=1},distance=..12] weakness
+execute at @r[gamemode=survival,scores={advantage=0,gamego=1}] as @r[gamemode=survival,scores={advantage=0,gamego=1}] run effect give @a[gamemode=survival,scores={advantage=1},distance=..12] weakness 12 0 true
 execute if entity @r[scores={gamego=1..}] unless entity @r[scores={ended=1..}] run scoreboard players add @a advtimen 1
 execute if entity @r[scores={advtimen=5..7,gamego=1..}] unless entity @r[scores={ended=1..}] run title @a[gamemode=survival,scores={ended=0,advantage=1}] actionbar {"text":"You have a game advantage! Use this power tactfully.","color":"aqua"}
 execute if entity @r[scores={advtimen=4860..,gamego=1..}] unless entity @r[scores={ended=1..}] run scoreboard players set @a advtimen 0
