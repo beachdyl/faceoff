@@ -25,6 +25,7 @@ execute if entity @r[scores={waittimer=1..,playersleft=4..}] run scoreboard play
 execute if entity @r[scores={waittimer=1..,playersleft=4..}] run scoreboard players set Bar waittime 150
 execute if entity @r[scores={waittimer=1..,playersleft=4..}] run bossbar set 4 players
 execute if entity @r[scores={waittimer=1..,playersleft=4..}] run bossbar set 3 name "Game Starting Now"
+execute if entity @r[scores={waittimer=1..,playersleft=4..}] run tellraw @a[scores={playtime=101..,waittime=1}] [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> Get ready! The game is about to start!"}]
 execute if entity @r[scores={waittimer=1..,playersleft=4..}] run scoreboard players operation Bar waittime -= @r waittime
 execute if entity @r[scores={waittimer=1..,playersleft=4..}] store result bossbar 3 value run scoreboard players get Bar waittime
 execute if entity @r[scores={waittimen=11..,waittimer=1..,playersleft=4..}] run playsound minecraft:block.note_block.harp master @a ~ ~ ~ 100 2
