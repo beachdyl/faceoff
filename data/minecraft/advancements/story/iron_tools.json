@@ -2,18 +2,17 @@
   "parent": "minecraft:story/smelt_iron",
   "display": {
     "icon": {
-      "item": "minecraft:iron_pickaxe",
-      "nbt": "{Damage:0}"
+      "item": "minecraft:iron_pickaxe"
     },
     "title": {
       "translate": "Get Even Harder"
     },
     "description": {
-      "translate": "For some, only very hard pickaxes will do"
+      "translate": "For some, only the hardest pickaxes will do"
     },
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
@@ -22,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:iron_pickaxe"
-            ]
+            "item": "minecraft:iron_pickaxe"
           }
         ]
       }

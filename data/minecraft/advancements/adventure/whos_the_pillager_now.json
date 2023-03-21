@@ -5,10 +5,10 @@
       "item": "minecraft:crossbow"
     },
     "title": {
-      "translate": "advancements.adventure.whos_the_pillager_now.title"
+      "translate": "Oh How The Tables Have Turned"
     },
     "description": {
-      "translate": "advancements.adventure.whos_the_pillager_now.description"
+      "translate": "Kill a Pillager with the weapons of its fallen brethren"
     },
     "frame": "task",
     "show_toast": true,

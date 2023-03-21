@@ -5,10 +5,10 @@
       "item": "minecraft:totem_of_undying"
     },
     "title": {
-      "translate": "That Was a Practice Round"
+      "translate": "Super Dragonball"
     },
     "description": {
-      "translate": "Use a Totem of Undying to cheat death"
+      "translate": "Use the rewards from a Super Dragonball to cheat death"
     },
     "frame": "goal",
     "show_toast": true,
@@ -20,9 +20,7 @@
       "trigger": "minecraft:used_totem",
       "conditions": {
         "item": {
-          "items": [
-            "minecraft:totem_of_undying"
-          ]
+          "item": "minecraft:totem_of_undying"
         }
       }
     }

@@ -5,14 +5,14 @@
       "item": "minecraft:obsidian"
     },
     "title": {
-      "translate": "I Like Hard Blocks and I Cannot Lie"
+      "translate": "Dragonball Prep"
     },
     "description": {
-      "translate": "Gather some Obsidian, a block known for being hard 24/7"
+      "translate": "Begin collecting Obsidian for a Dragonball"
     },
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:obsidian"]
+            "item": "minecraft:obsidian"
           }
         ]
       }

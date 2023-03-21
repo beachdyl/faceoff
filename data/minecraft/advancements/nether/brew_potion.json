@@ -5,10 +5,10 @@
       "item": "minecraft:potion"
     },
     "title": {
-      "translate": "Weird Science"
+      "translate": "advancements.nether.brew_potion.title"
     },
     "description": {
-      "translate": "Put some things into a bottle and light it on fire"
+      "translate": "advancements.nether.brew_potion.description"
     },
     "frame": "task",
     "show_toast": true,

@@ -5,12 +5,12 @@
       "item": "minecraft:nether_star"
     },
     "title": {
-      "translate": "Boss Battle"
+      "translate": "advancements.nether.summon_wither.title"
     },
     "description": {
       "translate": "advancements.nether.summon_wither.description"
     },
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

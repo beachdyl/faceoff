@@ -5,10 +5,10 @@
       "item": "minecraft:target"
     },
     "title": {
-      "translate": "Opponents Be Warned"
+      "translate": "advancements.adventure.bullseye.title"
     },
     "description": {
-      "translate": "Shoot a bullseye from over 30 blocks away"
+      "translate": "advancements.adventure.bullseye.description"
     },
     "frame": "challenge",
     "show_toast": true,

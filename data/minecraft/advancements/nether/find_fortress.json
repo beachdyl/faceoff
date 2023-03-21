@@ -5,14 +5,14 @@
       "item": "minecraft:nether_bricks"
     },
     "title": {
-      "translate": "Large and Spooky"
+      "translate": "advancements.nether.find_fortress.title"
     },
     "description": {
       "translate": "advancements.nether.find_fortress.description"
     },
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {

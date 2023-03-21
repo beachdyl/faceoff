@@ -5,14 +5,14 @@
       "item": "minecraft:iron_chestplate"
     },
     "title": {
-      "translate": "They Protecc"
+      "translate": "He Protecc"
     },
     "description": {
       "translate": "Obtain iron armor"
     },
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:iron_helmet"]
+            "item": "minecraft:iron_helmet"
           }
         ]
       }
@@ -31,7 +31,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:iron_chestplate"]
+            "item": "minecraft:iron_chestplate"
           }
         ]
       }
@@ -41,7 +41,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:iron_leggings"]
+            "item": "minecraft:iron_leggings"
           }
         ]
       }
@@ -51,7 +51,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:iron_boots"]
+            "item": "minecraft:iron_boots"
           }
         ]
       }

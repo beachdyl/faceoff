@@ -5,14 +5,14 @@
       "item": "minecraft:golden_carrot"
     },
     "title": {
-      "translate": "Slaughterhouse Empire"
+      "translate": "advancements.husbandry.breed_all_animals.title"
     },
     "description": {
       "translate": "advancements.husbandry.breed_all_animals.description"
     },
     "frame": "challenge",
     "show_toast": true,
-    "announce_to_chat": true,
+    "announce_to_chat": false,
     "hidden": true
   },
   "rewards": {

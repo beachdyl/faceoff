@@ -7,7 +7,7 @@
       "translate": "advancements.nether.root.title"
     },
     "description": {
-      "translate": "advancements.nether.root.description"
+      "translate": "An unreachable myth"
     },
     "frame": "task",
     "show_toast": false,

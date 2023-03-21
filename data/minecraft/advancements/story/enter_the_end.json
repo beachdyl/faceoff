@@ -8,12 +8,12 @@
       "translate": "Interdimensional Travel"
     },
     "description": {
-      "translate": "Go to the End to battle an ancient nemesis"
+      "translate": "Go to the End in an attempt to win the game"
     },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": true
+    "hidden": false
   },
   "criteria": {
     "entered_end": {

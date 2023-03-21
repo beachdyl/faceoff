@@ -5,7 +5,7 @@
       "item": "minecraft:cod"
     },
     "title": {
-      "translate": "Drowning in Pussy"
+      "translate": "advancements.husbandry.complete_catalogue.title"
     },
     "description": {
       "translate": "advancements.husbandry.complete_catalogue.description"
@@ -13,7 +13,7 @@
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false
+    "hidden": true
   },
   "rewards": {
     "experience": 50

@@ -8,7 +8,7 @@
       "translate": "Questionable Priorities"
     },
     "description": {
-      "translate": "Completely use up a diamond hoe instead of trying to succeed"
+      "translate": "Completely use up a diamond hoe instead of trying to win"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -23,7 +23,7 @@
       "trigger": "minecraft:item_durability_changed",
       "conditions": {
         "item": {
-          "items": ["minecraft:diamond_hoe"]
+          "item": "minecraft:diamond_hoe"
         },
         "durability": -1
       }

@@ -5,14 +5,14 @@
       "item": "minecraft:crossbow"
     },
     "title": {
-      "translate": "advancements.adventure.ol_betsy.title"
+      "translate": "Bow 2.0"
     },
     "description": {
       "translate": "advancements.adventure.ol_betsy.description"
     },
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {

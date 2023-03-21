@@ -5,10 +5,10 @@
       "item": "minecraft:elytra"
     },
     "title": {
-      "translate": "Red Bull Gives You Wiiings"
+      "translate": "I Believe I Can Fly"
     },
     "description": {
-      "translate": "Obtain an elytra from a LootCrate"
+      "translate": "Retrieve an elytra from a LootCrate"
     },
     "frame": "goal",
     "show_toast": true,
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:elytra"]
+            "item": "minecraft:elytra"
           }
         ]
       }

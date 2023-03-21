@@ -5,14 +5,14 @@
       "item": "minecraft:blaze_rod"
     },
     "title": {
-      "translate": "Immensely Hot Potato"
+      "translate": "Orang Gless"
     },
     "description": {
-      "translate": "Obtain a long, hot potato by killing a Blaze"
+      "translate": "Get orange stained glass, because why not"
     },
     "frame": "task",
     "show_toast": false,
-    "announce_to_chat": true,
+    "announce_to_chat": false,
     "hidden": false
   },
   "criteria": {
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:blaze_rod"]
+            "item": "minecraft:orange_stained_glass"
           }
         ]
       }

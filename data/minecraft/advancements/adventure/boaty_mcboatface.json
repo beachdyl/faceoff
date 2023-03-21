@@ -16,7 +16,7 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:oak_boat"]
+                        "item": "minecraft:oak_boat"
                     }
                 ]
             }
@@ -26,7 +26,7 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:spruce_boat"]
+                        "item": "minecraft:spruce_boat"
                     }
                 ]
             }
@@ -36,7 +36,7 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:birch_boat"]
+                        "item": "minecraft:birch_boat"
                     }
                 ]
             }
@@ -46,7 +46,7 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:jungle_boat"]
+                        "item": "minecraft:jungle_boat"
                     }
                 ]
             }
@@ -56,7 +56,7 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:acacia_boat"]
+                        "item": "minecraft:acacia_boat"
                     }
                 ]
             }
@@ -66,7 +66,7 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:dark_oak_boat"]
+                        "item": "minecraft:dark_oak_boat"
                     }
                 ]
             }

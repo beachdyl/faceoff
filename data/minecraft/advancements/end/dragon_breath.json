@@ -12,7 +12,7 @@
     },
     "frame": "goal",
     "show_toast": true,
-    "announce_to_chat": true,
+    "announce_to_chat": false,
     "hidden": true
   },
   "criteria": {
@@ -21,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:dragon_breath"
-            ]
+            "item": "minecraft:dragon_breath"
           }
         ]
       }
