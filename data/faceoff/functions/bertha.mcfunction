@@ -2,7 +2,7 @@
 function faceoff:clock
 function faceoff:playercount
 
-# DAMAGEALERT
+# DAMAGE ALERT
 function faceoff:damagealert
 
 # END
