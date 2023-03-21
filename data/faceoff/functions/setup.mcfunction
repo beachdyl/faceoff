@@ -227,4 +227,4 @@ scoreboard players set Thirteen mathobj 13
 scoreboard players set One mathobj 1
 
 # announce ready
-tellraw @p [{"text":"When you're ready, you can ","color":"green"},{"text":"[click here]","color":"light_green","italic":false,"clickEvent":{"action":"run_command","value":"/whitelist off"}},{"text":" to disable the whitelist, if necessary.","color":"green"}]
+tellraw @p [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> Hey there! The game is configured. When you're ready, you can"},{"text":"[click here]","color":"light_green","clickEvent":{"action":"run_command","value":"/whitelist off"}},{"text":" to disable the whitelist, if necessary."}]

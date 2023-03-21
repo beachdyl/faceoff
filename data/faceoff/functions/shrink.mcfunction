@@ -12,7 +12,7 @@ execute if score wbshrink global matches 1 run scoreboard players set gamego glo
 execute if score wbshrink global matches 1 run title @a title {"text":"Stage 1","color":"green"}
 execute if score wbshrink global matches 1 if score tournament global matches 0 run title @a subtitle {"text":"Slow Worldborder","color":"green"}
 execute if score wbshrink global matches 1 if score tournament global matches 1 run title @a subtitle {"text":"Fast Worldborder","color":"green"}
-execute if score wbshrink global matches 1 run tellraw @a [{"text":"Tip: You can run \"/trigger menu\" or ","italic":true,"color":"gray"},{"text":"[click here]","color":"gray","italic":true,"clickEvent":{"action":"run_command","value":"/trigger menu"}},{"text":" to toggle the visibility of the boss bars at any time during the game.","italic":true,"color":"gray"}]
+execute if score wbshrink global matches 1 run tellraw @a [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> Want to change which boss bars you can see? You can run \"/trigger menu\" or "},{"text":"[click here]","clickEvent":{"action":"run_command","value":"/trigger menu"}},{"text":" to edit them at any time during the game."}]
 execute if score wbshrink global matches 1 run scoreboard players set wbstage global 1
 execute if score wbshrink global matches 1 run scoreboard players set wbshrink global 2
 

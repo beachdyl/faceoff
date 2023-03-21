@@ -7,7 +7,8 @@ execute if score Now exist matches 1 if score gamestarted global matches 1 unles
 execute if score Now exist matches 1 if score gamestarted global matches 1 unless score ended global matches 1 run title @a times 20 150 20
 execute if score Now exist matches 1 if score gamestarted global matches 1 unless score ended global matches 1 run title @a title {"text":"Game Over!","color":"red"}
 execute if score Now exist matches 1 if score gamestarted global matches 1 unless score ended global matches 1 run title @a subtitle [{"selector":"@r[gamemode=survival,scores={health=1..}]","color":"gold"},{"text":" wins!","color":"gold"}]
+execute if score Now exist matches 1 if score gamestarted global matches 1 unless score ended global matches 1 run tellraw @r[gamemode=survival,scores={health=1..}] [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> Congratulations! You have won the game."}]
 execute if score Now exist matches 1 if score gamestarted global matches 1 unless score ended global matches 1 run scoreboard players set @e[type=armor_stand] total 10000
 execute if score Now exist matches 1 if score gamestarted global matches 1 unless score ended global matches 1 run scoreboard objectives setdisplay sidebar.team.dark_purple deathtimem
 execute if score Now exist matches 1 if score gamestarted global matches 1 unless score ended global matches 1 run scoreboard players set ended global 1
-execute if score Now exist matches 1 if entity @r[scores={ended=1}] run gamemode spectator @a[gamemode=!spectator]
+execute if score Now exist matches 1 if score ended global matches 1 run gamemode spectator @a[gamemode=!spectator]

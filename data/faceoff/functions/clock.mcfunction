@@ -14,7 +14,7 @@ team join s @r[scores={health=0,mobkills=1..},team=!s,gamemode=survival]
 team join h @r[scores={health=0,mobkills=..0},team=!h,gamemode=survival]
 
 # newly dead players get a haunt prompt
-tellraw @a[scores={health=0,hauntprompt=0},gamemode=survival] [{"text":"Tip: You can run \"/trigger menu\" or ","italic":true,"color":"gray"},{"text":"[click here]","color":"gray","italic":true,"clickEvent":{"action":"suggest_command","value":"/trigger menu"}},{"text":" to access the haunt menu as a dead player.","italic":true,"color":"gray"}]
+tellraw @a[scores={health=0,hauntprompt=0},gamemode=survival] [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> Now that you're dead, you can run \"/trigger menu\" or "},{"text":"[click here]","clickEvent":{"action":"suggest_command","value":"/trigger menu"}},{"text":" to access the haunt menu."}]
 scoreboard players set @a[scores={health=0,hauntprompt=0,damagealert=1..},gamemode=survival] damagealert 3
 scoreboard players set @a[scores={health=0,hauntprompt=0},gamemode=survival] hauntprompt 1
 
@@ -48,7 +48,7 @@ scoreboard players enable @a[team=h] haunt
 execute if entity @r[scores={adv=1}] run scoreboard players set @a advantage 0
 execute if entity @r[scores={adv=1}] run scoreboard players set @r[scores={adv=1}] advantage 1
 scoreboard players set @r[scores={advantage=1,health=0}] advantage 0
-execute if entity @r[scores={adv=1,tournament=1}] run tellraw @a {"text":"Warning: The game is in tournament mode and a player has been assigned a game advantage. This can be considered unfair.","color":"gold"}
+execute if entity @r[scores={adv=1,tournament=1}] run tellraw @a [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> Just to let you know, the game is in tournament mode, but a player has been given a game advantage. Some people consider this unfair."}]
 execute if entity @r[scores={adv=1}] run scoreboard players set @a[scores={adv=1}] adv 0
 effect give @a[scores={advantage=1,gamego=1}] speed 15 0 true
 effect give @a[scores={advantage=1,gamego=1}] invisibility 15 0 false

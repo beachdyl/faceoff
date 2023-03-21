@@ -17,18 +17,18 @@ tellraw @r[scores={menu=1..}] {"text":" ","color":"aqua"}
 scoreboard players set @r[scores={menu=1..}] menu 0
 
 # surrender logic
-tellraw @r[scores={suicide=1..},gamemode=!survival] {"text":"You cannot surrender because you are not alive.","color":"red"}
+tellraw @r[scores={suicide=1..},gamemode=!survival] [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> "},{"text":"Error!","color":"red"},{"text":" You cannot surrender because you are not alive.","color":"red"}]
 scoreboard players set @r[scores={suicide=1..},gamemode=!survival] suicide 0
 
 tellraw @r[scores={suicide=1}] {"text":" ","color":"aqua"}
 tellraw @r[scores={suicide=1}] {"text":"Are you sure you want to surrender?","color":"red"}
-tellraw @r[scores={suicide=1}] {"text":"By surrendering, you will immediately die in your current position and become a spectator. You also forfeit your ability to haunt after death. Surrendered players cannot be resurrected.","color":"gold"}
+tellraw @r[scores={suicide=1}] [{"text":"By surrendering, ","color":"gold"},{"text":"Miguel","color":"aqua"},{"text":" will immediately kill you in your current position, then you will become a spectator. You also forfeit your ability to haunt after death. Surrendered players cannot be resurrected.","color":"gold"}]
 tellraw @r[scores={suicide=1}] {"text":" ","color":"aqua"}
 tellraw @r[scores={suicide=1}] [{"text":" "},{"text":"[Confirm Surrender]","color":"red","clickEvent":{"action":"run_command","value":"/trigger suicide set 6"},"hoverEvent":{"action":"show_text","value":"Surrender immediately."}},{"text":" "},{"text":"[Cancel]","color":"green","clickEvent":{"action":"run_command","value":"/trigger suicide set 3"},"hoverEvent":{"action":"show_text","value":"Stay alive and return to the game."}}]
 tellraw @r[scores={suicide=1}] {"text":" ","color":"aqua"}
 
 tellraw @r[scores={suicide=3}] {"text":" ","color":"aqua"}
-tellraw @r[scores={suicide=3}] {"text":"Surrender cancelled.","color":"aqua"}
+tellraw @r[scores={suicide=3}] [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> At your request, I've cancelled your surrender."}]
 tellraw @r[scores={suicide=3}] {"text":" ","color":"aqua"}
 
 execute if entity @r[scores={suicide=6}] run team join h @r[scores={suicide=6}]
@@ -39,7 +39,7 @@ execute if entity @r[scores={suicide=6}] run team join g @r[scores={suicide=6,te
 execute if entity @r[scores={suicide=6}] run team join b @r[scores={suicide=6,team=3}]
 execute if entity @r[scores={suicide=6}] run team join a @r[scores={suicide=6,team=4}]
 execute if entity @r[scores={suicide=6}] run advancement grant @r[scores={suicide=6}] only minecraft:adventure/surrender
-execute if entity @r[scores={suicide=6}] run tellraw @a [{"selector":"@r[scores={suicide=6}]"},{"text":" has surrendered from the game","color":"white"}]
+execute if entity @r[scores={suicide=6}] run tellraw @a [{"selector":"@r[scores={suicide=6}]"},{"text":" has requested death, and ","color":"white"},{"text":"Miguel","color":"aqua"},{"text":" obliged."}]
 execute if entity @r[scores={suicide=6}] run team join h @r[scores={suicide=6}]
 
 scoreboard players set @r[scores={suicide=1..}] suicide 0

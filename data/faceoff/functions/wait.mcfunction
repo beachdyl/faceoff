@@ -1,19 +1,19 @@
 # four player minimum
-execute if entity @r[scores={waittimer=1..,playersleft=..3}] run tellraw @a {"text":"Cannot start game with fewer than four players.","color":"red"}
+execute if entity @r[scores={waittimer=1..,playersleft=..3}] run tellraw @a [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> "},{"text":"Error!","color":"red"},{"text":" A game manager tried to start the game with fewer than four players."}]
 execute if entity @r[scores={waittimer=1..,playersleft=..3}] run scoreboard players set lobbytimer global 1
 execute if entity @r[scores={waittimer=1..,playersleft=..3}] run bossbar set 4 players @a
 execute if entity @r[scores={waittimer=1..,playersleft=..3}] run scoreboard players set waittimer global 0
 execute if entity @r[scores={waittimer=1..,playersleft=..3}] run scoreboard players set @a waittimer 0
 
 # too many players for standard mode
-execute if entity @r[scores={waittimer=1..,playersleft=16..,tournament=0}] run tellraw @a {"text":"Cannot start game with greater than 15 players unless in tournament mode.","color":"red"}
+execute if entity @r[scores={waittimer=1..,playersleft=16..,tournament=0}] run tellraw @a [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> "},{"text":"Error!","color":"red"},{"text":" A game manager tried to start the game with greater than 15 players. To do this, the game must be in Tournament mode."}]
 execute if entity @r[scores={waittimer=1..,playersleft=16..,tournament=0}] run scoreboard players set lobbytimer global 1
 execute if entity @r[scores={waittimer=1..,playersleft=16..,tournament=0}] run bossbar set 4 players @a
 execute if entity @r[scores={waittimer=1..,playersleft=16..,tournament=0}] run scoreboard players set waittimer global 0
 execute if entity @r[scores={waittimer=1..,playersleft=16..,tournament=0}] run scoreboard players set @a waittimer 0
 
 # too many players for tournament mode
-execute if entity @r[scores={waittimer=1..,playersleft=101..,tournament=1}] run tellraw @a {"text":"Cannot start game with greater than 100 players.","color":"red"}
+execute if entity @r[scores={waittimer=1..,playersleft=101..,tournament=1}] run tellraw @a [{"text":"<"},{"text":"Miguel","color":"aqua"},{"text":"> "},{"text":"Error!","color":"red"},{"text":" A game manager tried to start the game with greater than 100 players. Excess players need to become spectators."}]
 execute if entity @r[scores={waittimer=1..,playersleft=101..,tournament=1}] run scoreboard players set lobbytimer global 1
 execute if entity @r[scores={waittimer=1..,playersleft=101..,tournament=1}] run bossbar set 4 players @a
 execute if entity @r[scores={waittimer=1..,playersleft=101..,tournament=1}] run scoreboard players set waittimer global 0
