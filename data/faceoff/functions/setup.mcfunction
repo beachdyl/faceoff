@@ -158,8 +158,6 @@ gamerule drowningDamage false
 # lock lobby time
 time set 18000
 
-# center armor stand
-
 # set up bossbars
 bossbar add 1 "World Border"
 bossbar set 1 color green
